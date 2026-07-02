@@ -7,17 +7,15 @@ whatever grounding data that path needs, run the generation call, and
 assemble a schema-exact ChatResponse where every name/url comes from our
 own catalog data -- never from LLM-generated text.
 """
-import re
-from functools import lru_cache
-from pathlib import Path
-
 from app.agent_schemas import ExtractionResult, GenerationResult
+from app.domain_signals import extract_signals
 from app.guardrails import heuristic_scope_check, validate_recommendations
 from app.llm import LLMError, call_structured, new_deadline
 from app.prompts.extract import EXTRACTION_SYSTEM_PROMPT, build_extraction_user_content
 from app.prompts.generate import GENERATION_SYSTEM_PROMPT, build_generation_user_content
 from app.retrieval import Requirements, lookup_named_items, search
 from app.schemas import ChatResponse, Message, Recommendation
+from app.vocabulary import important_word_count
 
 # With an 8-message hard cap (see assignment: "8 turns including user &
 # assistant"), there is no room for a leisurely multi-round interview.
@@ -27,83 +25,13 @@ from app.schemas import ChatResponse, Message, Recommendation
 # exchange without ever risking running out of turns still empty-handed.
 FORCE_COMMIT_AT_USER_TURN = 3
 
-# Crude keyword -> SHL test-type-code map used ONLY by the no-LLM
-# fallback path below, so a degraded server (rate-limited or otherwise)
-# still catches the unambiguous cases -- "I only need a personality
-# assessment" should boost personality-type (P) results even without
-# real language understanding. This is deliberately small and literal;
-# it is not trying to replace the extraction LLM's judgment, only to
-# stop the fallback from ignoring an explicit, obvious signal.
-FALLBACK_TYPE_KEYWORDS = {
-    "P": ["personality", "behaviour", "behavior"],
-    "A": ["cognitive", "aptitude", "numerical reasoning", "verbal reasoning", "abstract reasoning", "ability test"],
-    "K": ["technical test", "knowledge test", "coding test", "programming test", "skills test"],
-    "S": ["simulation"],
-    "B": ["situational judgement", "situational judgment", "biodata"],
-    "D": ["360", "development report"],
-}
-
-
-# Files the ontology vocabulary is loaded from, checked in this order,
-# resolved relative to this module -- so it works whether the file ends
-# up named as the .md it was authored as, or gets saved as .txt.
-_ONTOLOGY_FILENAMES = ("SHL_Catalog_Ontology_Clean.md", "SHL_Catalog_Ontology_Clean.txt")
-
-# Generic English words that show up throughout the ontology's prose
-# sections (job-role descriptions, soft-skill blurbs, etc.) but carry no
-# signal on their own -- without excluding these, "the" or "and"
-# appearing in the catalog would make them count as a "matched skill".
-_STOPWORDS = frozenset({
-    "a", "an", "the", "and", "or", "of", "in", "on", "for", "to", "with", "is", "are", "be",
-    "this", "that", "these", "those", "by", "as", "at", "from", "it", "its", "into", "than",
-    "then", "so", "such", "not", "no", "yes", "if", "but", "we", "you", "i", "he", "she",
-    "they", "them", "his", "her", "their", "our", "your", "my", "me", "us", "do", "does",
-    "did", "can", "could", "should", "would", "will", "shall", "have", "has", "had", "was",
-    "were", "been", "being", "also", "etc", "other", "some", "any", "all", "each", "more",
-    "most", "much", "many", "just", "only", "about", "over", "under", "between", "up", "down",
-    "off", "again", "once", "here", "there", "when", "where", "why", "how", "am", "are",
-})
-
-# Matches alphanumeric tokens while keeping the punctuation that's load
-# bearing in tech terms -- "C#", "C++", ".NET" would all lose their
-# identity under a plain \w+ split.
-_WORD_RE = re.compile(r"[A-Za-z][A-Za-z0-9+#.\-]*")
-
-
-@lru_cache(maxsize=1)
-def _load_important_words() -> frozenset[str]:
-    """Vocabulary of domain-significant terms -- assessment names, job
-    roles, programming languages, skills -- pulled from the SHL catalog
-    ontology. Used so the no-LLM fallback can tell a *meaningful* word
-    from filler: "java python c" should read as strong signal despite
-    being three words, while "i am am am am am" (arguably more words)
-    should not, because raw word count can't distinguish content from
-    repetition.
-
-    Cached after first load since the file doesn't change at runtime.
-    Returns an empty set (rather than raising) if the file isn't found,
-    so callers can detect that and fall back to the old word-count
-    heuristic instead of silently having zero signal forever.
-    """
-    here = Path(__file__).resolve().parent
-    for filename in _ONTOLOGY_FILENAMES:
-        path = here / filename
-        if path.exists():
-            text = path.read_text(encoding="utf-8", errors="ignore")
-            tokens = (w.lower().strip(".,()-") for w in _WORD_RE.findall(text))
-            return frozenset(w for w in tokens if len(w) > 1 and w not in _STOPWORDS)
-    return frozenset()
-
-
-def _important_word_count(text: str) -> int:
-    """Count distinct tokens in `text` that appear in the ontology
-    vocabulary. A single strong domain match (e.g. "java") is treated as
-    more meaningful than several words of generic filler."""
-    vocab = _load_important_words()
-    if not vocab:
-        return 0
-    tokens = {w.lower().strip(".,()-") for w in _WORD_RE.findall(text)}
-    return len(tokens & vocab)
+# Below this many recognized-vocabulary words, treat the conversation as
+# genuinely still lacking signal (see app/vocabulary.py -- one real
+# domain term like "java" or "nursing" counts for more than several
+# words of filler). A domain_signals hit (test type / job level /
+# role family / explicit compare) counts as sufficient on its own even
+# at zero vocabulary words, since those are themselves strong signal.
+MIN_VOCAB_WORDS_FOR_SIGNAL = 1
 
 
 def _format_transcript(messages: list[Message]) -> str:
@@ -125,36 +53,30 @@ def _to_retrieval_requirements(req) -> Requirements:
     )
 
 
-def _fallback_type_hints(text: str) -> list[str]:
-    lowered = text.lower()
-    return [code for code, kws in FALLBACK_TYPE_KEYWORDS.items() if any(kw in lowered for kw in kws)]
-
-
 def _fallback_extraction(messages: list[Message], heuristic_hint: str | None) -> ExtractionResult:
     """Degrade gracefully if the LLM is unreachable (bad/missing key,
     provider outage, rate limiting, or the request's time budget ran
     out) rather than 500 the whole request or hang past the deadline.
 
     Confirmed via testing against live Groq: a 50-conversation local
-    test run hit free-tier rate limiting a few requests in, so this
-    path isn't just a theoretical "what if the key is missing" case --
-    it gets exercised for real under load, including (plausibly) during
-    grading. Two things it must NOT do, both bugs found from that run:
-    1. Treat only "injection_attempt" as out-of-scope -- off_topic and
-       legal_or_general_hiring_advice hints were slipping through to
-       in_scope=True.
-    2. Hardcode missing_critical_info=True unconditionally, or ignore an
-       explicit, unambiguous test-type mention (a bare "I only need a
-       personality assessment" retrieved unrelated technical tests,
-       because plain TF-IDF without a type boost doesn't weight
-       "personality" strongly enough on its own).
+    test run hit free-tier rate limiting a few requests in, so this path
+    isn't a theoretical "what if the key is missing" case -- it gets
+    exercised for real under load, plausibly including grading, which is
+    why it leans on the full app.vocabulary (100% catalog coverage, not
+    a hand-transcribed subset) and app.domain_signals (test type, job
+    level, role family, duration, negation, compare, closing-signal
+    detection) rather than a single word-count threshold. It is still a
+    heuristic approximation of real language understanding, not a
+    replacement for it -- but it should no longer go blind on anything
+    that isn't a handful of hardcoded keywords.
+
+    Pulls signal from the WHOLE conversation so far, not just the latest
+    message -- "I need something for a call center role" then later
+    "must be under 20 minutes" should combine into one query carrying
+    both signals, rather than the fallback re-litigating from scratch
+    on every turn.
     """
     latest = messages[-1].content if messages else ""
-    # Pull signal from every user turn so far, not just the latest one --
-    # e.g. "I need something for a call center role" followed later by
-    # "must be under 30 minutes" should combine into one query with both
-    # signals, instead of the fallback re-litigating from a blank slate
-    # on every turn.
     conversation_text = " ".join(m.content for m in messages if m.role == "user")
 
     if heuristic_hint in ("off_topic", "legal_or_general_hiring_advice"):
@@ -165,30 +87,44 @@ def _fallback_extraction(messages: list[Message], heuristic_hint: str | None) ->
         }[heuristic_hint]
         return ExtractionResult(in_scope=False, refusal_reason=reason, direct_reply=reason, search_query=latest)
 
-    type_hints = _fallback_type_hints(conversation_text)
-    vocab = _load_important_words()
-    if vocab:
-        # Vocabulary loaded -- judge signal by matched domain terms, not
-        # raw length. One real skill/role/tool mention is enough; five
-        # words of "i really need help please" is not.
-        has_enough_signal = _important_word_count(conversation_text) >= 1 or bool(type_hints)
-    else:
-        # Ontology file missing -- degrade to the cruder word-count
-        # check rather than treating every message as signal-free.
-        word_count = len(conversation_text.split())
-        has_enough_signal = word_count >= 6 or bool(type_hints)
+    signals = extract_signals(conversation_text)
+
+    # A comparison request is strong, unambiguous signal on its own --
+    # route straight there regardless of the vocabulary/word-count check
+    # below (handle_chat checks compare_targets before missing_critical_info).
+    if signals["compare_targets"]:
+        return ExtractionResult(
+            in_scope=True,
+            compare_targets=signals["compare_targets"],
+            search_query=conversation_text,
+            is_closing_signal=signals["is_closing_signal"],
+        )
+
+    vocab_hits = important_word_count(conversation_text)
+    domain_hit = bool(signals["test_types_wanted"] or signals["job_level"] or signals["extra_search_terms"])
+    has_enough_signal = vocab_hits >= MIN_VOCAB_WORDS_FOR_SIGNAL or domain_hit
+
     clarifying_question = (
         None if has_enough_signal
         else "Could you tell me more about the role or skills you're assessing for?"
     )
+    query = conversation_text
+    if signals["extra_search_terms"]:
+        query = f"{query} {signals['extra_search_terms']}"
+
     return ExtractionResult(
         in_scope=True,
         missing_critical_info=not has_enough_signal,
         clarifying_question=clarifying_question,
         direct_reply=clarifying_question,  # already unreachable once -- don't attempt a 2nd doomed call
         wants_recommendation_now=has_enough_signal,
-        requirements={"test_types_wanted": type_hints} if type_hints else {},
-        search_query=conversation_text,
+        requirements={
+            "test_types_wanted": signals["test_types_wanted"],
+            "job_level": signals["job_level"],
+            "max_duration_minutes": signals["max_duration_minutes"],
+        },
+        search_query=query,
+        is_closing_signal=signals["is_closing_signal"],
     )
 
 
