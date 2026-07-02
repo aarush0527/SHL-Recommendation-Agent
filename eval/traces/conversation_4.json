@@ -1,0 +1,129 @@
+{
+  "conversation_id": 4,
+  "persona_facts": [
+    "Hiring graduate financial analysts — final-year students, no work experience. We need numerical reasoning and a finance knowledge test.",
+    "Good. Can you also add a situational judgement element — work-context decision making for graduates?",
+    "That covers it. Numerical + Graduate Scenarios as first filter, domain tests for shortlisted candidates."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "SHL Verify Interactive – Numerical Reasoning",
+      "test_type": "A,S",
+      "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-numerical-reasoning/"
+    },
+    {
+      "name": "Financial Accounting (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/financial-accounting-new/"
+    },
+    {
+      "name": "Basic Statistics (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/basic-statistics-new/"
+    },
+    {
+      "name": "Graduate Scenarios",
+      "test_type": "B",
+      "url": "https://www.shl.com/products/product-catalog/view/graduate-scenarios/"
+    },
+    {
+      "name": "Occupational Personality Questionnaire OPQ32r",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+    }
+  ],
+  "num_turns_in_reference": 3,
+  "full_transcript": [
+    {
+      "user": "Hiring graduate financial analysts — final-year students, no work experience. We need numerical reasoning and a finance knowledge test.",
+      "agent_reply": "For graduate-level financial analysts:",
+      "recommendations": [
+        {
+          "name": "SHL Verify Interactive – Numerical Reasoning",
+          "test_type": "A,S",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-numerical-reasoning/"
+        },
+        {
+          "name": "Financial Accounting (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/financial-accounting-new/"
+        },
+        {
+          "name": "Basic Statistics (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/basic-statistics-new/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Good. Can you also add a situational judgement element — work-context decision making for graduates?",
+      "agent_reply": "Added Graduate Scenarios — SHL's situational judgement test designed specifically for graduate-level candidates. The previous three items are unchanged:",
+      "recommendations": [
+        {
+          "name": "SHL Verify Interactive – Numerical Reasoning",
+          "test_type": "A,S",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-numerical-reasoning/"
+        },
+        {
+          "name": "Financial Accounting (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/financial-accounting-new/"
+        },
+        {
+          "name": "Basic Statistics (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/basic-statistics-new/"
+        },
+        {
+          "name": "Graduate Scenarios",
+          "test_type": "B",
+          "url": "https://www.shl.com/products/product-catalog/view/graduate-scenarios/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "That covers it. Numerical + Graduate Scenarios as first filter, domain tests for shortlisted candidates.",
+      "agent_reply": "Good two-stage design. That keeps the initial screen fast while reserving knowledge tests for candidates who've cleared the cognitive bar.",
+      "recommendations": [
+        {
+          "name": "SHL Verify Interactive – Numerical Reasoning",
+          "test_type": "A,S",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-numerical-reasoning/"
+        },
+        {
+          "name": "Financial Accounting (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/financial-accounting-new/"
+        },
+        {
+          "name": "Basic Statistics (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/basic-statistics-new/"
+        },
+        {
+          "name": "Graduate Scenarios",
+          "test_type": "B",
+          "url": "https://www.shl.com/products/product-catalog/view/graduate-scenarios/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}

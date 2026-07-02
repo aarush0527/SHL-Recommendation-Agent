@@ -1,0 +1,124 @@
+{
+  "conversation_id": 8,
+  "persona_facts": [
+    "I need to quickly screen admin assistants for Excel and Word daily.",
+    "In that case, I am OK with adding a simulation - we want to capture the capabilties.",
+    "That's good."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "Microsoft Excel 365 (New)",
+      "test_type": "K,S",
+      "url": "https://www.shl.com/products/product-catalog/view/microsoft-excel-365-new/"
+    },
+    {
+      "name": "Microsoft Word 365 (New)",
+      "test_type": "K,S",
+      "url": "https://www.shl.com/products/product-catalog/view/microsoft-word-365-new/"
+    },
+    {
+      "name": "MS Excel (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/ms-excel-new/"
+    },
+    {
+      "name": "MS Word (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/ms-word-new/"
+    },
+    {
+      "name": "Occupational Personality Questionnaire OPQ32r",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+    }
+  ],
+  "num_turns_in_reference": 3,
+  "full_transcript": [
+    {
+      "user": "I need to quickly screen admin assistants for Excel and Word daily.",
+      "agent_reply": "For a quick knowledge check, the knowledge-only variants are the right fit — they test conceptual understanding.\nWe also have end-to-end simulations to test these capabilties but I have excluded them due to the time constraint.\n\nI've also included OPQ32r as a default personality measure — admin-assistant hires benefit from a behavioural fit signal beyond pure tool knowledge. Say the word if you'd prefer to skip personality.",
+      "recommendations": [
+        {
+          "name": "MS Excel (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/ms-excel-new/"
+        },
+        {
+          "name": "MS Word (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/ms-word-new/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "In that case, I am OK with adding a simulation - we want to capture the capabilties.",
+      "agent_reply": "Understood.Here's the updated list:",
+      "recommendations": [
+        {
+          "name": "Microsoft Excel 365 (New)",
+          "test_type": "K,S",
+          "url": "https://www.shl.com/products/product-catalog/view/microsoft-excel-365-new/"
+        },
+        {
+          "name": "Microsoft Word 365 (New)",
+          "test_type": "K,S",
+          "url": "https://www.shl.com/products/product-catalog/view/microsoft-word-365-new/"
+        },
+        {
+          "name": "MS Excel (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/ms-excel-new/"
+        },
+        {
+          "name": "MS Word (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/ms-word-new/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "That's good.",
+      "agent_reply": "Confirmed.",
+      "recommendations": [
+        {
+          "name": "Microsoft Excel 365 (New)",
+          "test_type": "K,S",
+          "url": "https://www.shl.com/products/product-catalog/view/microsoft-excel-365-new/"
+        },
+        {
+          "name": "Microsoft Word 365 (New)",
+          "test_type": "K,S",
+          "url": "https://www.shl.com/products/product-catalog/view/microsoft-word-365-new/"
+        },
+        {
+          "name": "MS Excel (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/ms-excel-new/"
+        },
+        {
+          "name": "MS Word (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/ms-word-new/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}

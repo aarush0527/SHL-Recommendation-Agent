@@ -1,0 +1,115 @@
+{
+  "conversation_id": 7,
+  "persona_facts": [
+    "We're hiring bilingual healthcare admin staff in South Texas — they handle patient records and need to be assessed in Spanish. HIPAA compliance is critical. What assessments work?",
+    "They're functionally bilingual — English fluent for written work. Go with the hybrid.",
+    "Are we legally required under HIPAA to test all staff who touch patient records? And does this SHL test satisfy that requirement?",
+    "Understood. Keep the shortlist as-is."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "HIPAA (Security)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/hipaa-security/"
+    },
+    {
+      "name": "Medical Terminology (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/medical-terminology-new/"
+    },
+    {
+      "name": "Microsoft Word 365 - Essentials (New)",
+      "test_type": "K,S",
+      "url": "https://www.shl.com/products/product-catalog/view/microsoft-word-365-essentials-new/"
+    },
+    {
+      "name": "Dependability and Safety Instrument (DSI)",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/dependability-and-safety-instrument-dsi/"
+    },
+    {
+      "name": "Occupational Personality Questionnaire OPQ32r",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+    }
+  ],
+  "num_turns_in_reference": 4,
+  "full_transcript": [
+    {
+      "user": "We're hiring bilingual healthcare admin staff in South Texas — they handle patient records and need to be assessed in Spanish. HIPAA compliance is critical. What assessments work?",
+      "agent_reply": "There's a real catalog constraint here: the role-specific knowledge tests for healthcare admin — HIPAA (Security), Medical Terminology, Microsoft Word — are English-only. The personality measures (OPQ32r, DSI) do support Latin American Spanish.\n\nTwo ways to run this:\n(a) Hybrid: knowledge tests in English, personality in Spanish. Workable if your candidates are functionally bilingual at a working level for the English knowledge tests.\n(b) Personality-only in Spanish, and assess HIPAA/medical terminology through your own structured interview. Trades off measurement rigour for language fit.\n\nWhich fits your candidate pool better?",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "They're functionally bilingual — English fluent for written work. Go with the hybrid.",
+      "agent_reply": "For a trust-sensitive role with patient-record access, two complementary personality measures: DSI focuses specifically on dependability and safety-critical reliability — directly relevant to HIPAA-protected information handling. OPQ32r gives a broader workplace-behaviour profile. Both run in Latin American Spanish.\n\nFull hybrid battery:",
+      "recommendations": [
+        {
+          "name": "HIPAA (Security)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/hipaa-security/"
+        },
+        {
+          "name": "Medical Terminology (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/medical-terminology-new/"
+        },
+        {
+          "name": "Microsoft Word 365 - Essentials (New)",
+          "test_type": "K,S",
+          "url": "https://www.shl.com/products/product-catalog/view/microsoft-word-365-essentials-new/"
+        },
+        {
+          "name": "Dependability and Safety Instrument (DSI)",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/dependability-and-safety-instrument-dsi/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Are we legally required under HIPAA to test all staff who touch patient records? And does this SHL test satisfy that requirement?",
+      "agent_reply": "Those are legal compliance questions outside what I can advise on — I can help you select assessments, but not interpret regulatory obligations or whether a specific test satisfies a legal requirement. Your legal or compliance team is the right resource for that.\n\nWhat I can confirm: HIPAA (Security) measures knowledge of HIPAA security provisions. Whether using it fulfils a particular regulatory obligation is a question for counsel.",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Understood. Keep the shortlist as-is.",
+      "agent_reply": "Confirmed. Hybrid battery as above — knowledge tests in English, DSI and OPQ32r in Latin American Spanish.",
+      "recommendations": [
+        {
+          "name": "HIPAA (Security)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/hipaa-security/"
+        },
+        {
+          "name": "Medical Terminology (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/medical-terminology-new/"
+        },
+        {
+          "name": "Microsoft Word 365 - Essentials (New)",
+          "test_type": "K,S",
+          "url": "https://www.shl.com/products/product-catalog/view/microsoft-word-365-essentials-new/"
+        },
+        {
+          "name": "Dependability and Safety Instrument (DSI)",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/dependability-and-safety-instrument-dsi/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}

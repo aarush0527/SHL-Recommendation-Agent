@@ -1,0 +1,107 @@
+{
+  "conversation_id": 3,
+  "persona_facts": [
+    "We're screening 500 entry-level contact centre agents. Inbound calls, customer service focus. What should we use?",
+    "English.",
+    "US.",
+    "Is the Contact Center Call Simulation different from the Customer Service Phone Simulation?",
+    "Perfect — new simulation for volume, old solution for finalists. Confirmed."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "SVAR Spoken English (US) (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/svar-spoken-english-us-new/"
+    },
+    {
+      "name": "Contact Center Call Simulation (New)",
+      "test_type": "S",
+      "url": "https://www.shl.com/products/product-catalog/view/contact-center-call-simulation-new/"
+    },
+    {
+      "name": "Entry Level Customer Serv - Retail & Contact Center",
+      "test_type": "P,C",
+      "url": "https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/"
+    },
+    {
+      "name": "Customer Service Phone Simulation",
+      "test_type": "B,S",
+      "url": "https://www.shl.com/products/product-catalog/view/customer-service-phone-simulation/"
+    }
+  ],
+  "num_turns_in_reference": 5,
+  "full_transcript": [
+    {
+      "user": "We're screening 500 entry-level contact centre agents. Inbound calls, customer service focus. What should we use?",
+      "agent_reply": "Before I shape the stack — what language are the calls in? That drives which spoken-language screen we use.",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "English.",
+      "agent_reply": "SVAR has four English variants in the catalog: US, UK, Australian, and Indian accent. The choice matters because the screen is calibrated for the accent your callers will hear. Which fits your operation?",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "US.",
+      "agent_reply": "For high-volume entry-level contact centre screening in English US, the right stack layers a spoken language screen, a simulation, and a behavioural fit component:",
+      "recommendations": [
+        {
+          "name": "SVAR Spoken English (US) (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/svar-spoken-english-us-new/"
+        },
+        {
+          "name": "Contact Center Call Simulation (New)",
+          "test_type": "S",
+          "url": "https://www.shl.com/products/product-catalog/view/contact-center-call-simulation-new/"
+        },
+        {
+          "name": "Entry Level Customer Serv - Retail & Contact Center",
+          "test_type": "P,C",
+          "url": "https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/"
+        },
+        {
+          "name": "Customer Service Phone Simulation",
+          "test_type": "B,S",
+          "url": "https://www.shl.com/products/product-catalog/view/customer-service-phone-simulation/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Is the Contact Center Call Simulation different from the Customer Service Phone Simulation?",
+      "agent_reply": "Yes — distinct products. The Customer Service Phone Simulation is an older bundled solution (B, P, S) combining personality, behaviour, and simulation in one package. The Contact Center Call Simulation (New) is a standalone, newer simulation focused purely on the in-call interaction. Many clients use the new simulation for volume screening and the older solution for finalist-stage depth.",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Perfect — new simulation for volume, old solution for finalists. Confirmed.",
+      "agent_reply": "Good two-stage design.",
+      "recommendations": [
+        {
+          "name": "SVAR Spoken English (US) (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/svar-spoken-english-us-new/"
+        },
+        {
+          "name": "Contact Center Call Simulation (New)",
+          "test_type": "S",
+          "url": "https://www.shl.com/products/product-catalog/view/contact-center-call-simulation-new/"
+        },
+        {
+          "name": "Entry Level Customer Serv - Retail & Contact Center",
+          "test_type": "P,C",
+          "url": "https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/"
+        },
+        {
+          "name": "Customer Service Phone Simulation",
+          "test_type": "B,S",
+          "url": "https://www.shl.com/products/product-catalog/view/customer-service-phone-simulation/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "conversation_id": 5,
+  "persona_facts": [
+    "As part of our restructuring and annual talent audit, we need to re-skill our Sales organization. What solutions do you recommend?",
+    "What’s the difference between OPQ and OPQ MQ Sales Report?",
+    "Clear. We’ll use OPQ for everyone and add MQ only where we want motivators in the Sales Report; keeping the five solutions as our audit stack."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "Global Skills Assessment",
+      "test_type": "C, K",
+      "url": "https://www.shl.com/products/product-catalog/view/global-skills-assessment/"
+    },
+    {
+      "name": "Global Skills Development Report",
+      "test_type": "D",
+      "url": "https://www.shl.com/products/product-catalog/view/global-skills-development-report/"
+    },
+    {
+      "name": "Occupational Personality Questionnaire OPQ32r",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+    },
+    {
+      "name": "OPQ MQ Sales Report",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/opq-mq-sales-report/"
+    },
+    {
+      "name": "Sales Transformation 2.0 - Individual Contributor",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/salestransformationreport2-0-individualcontributor/"
+    }
+  ],
+  "num_turns_in_reference": 3,
+  "full_transcript": [
+    {
+      "user": "As part of our restructuring and annual talent audit, we need to re-skill our Sales organization. What solutions do you recommend?",
+      "agent_reply": "For a compact audit-and-development stack: **self-reported skills** (GSA plus its development report for re-skilling initiative), **personality** via OPQ32r, a **sales-specific OPQ view** with optional motivators, and **Sales Transformation** for how reps show up in a digital-first selling model. First-line sales managers can follow the same spine and use the Sales Manager Sales Transformation report from the catalog when you split leader vs. rep reporting.",
+      "recommendations": [
+        {
+          "name": "Global Skills Assessment",
+          "test_type": "C, K",
+          "url": "https://www.shl.com/products/product-catalog/view/global-skills-assessment/"
+        },
+        {
+          "name": "Global Skills Development Report",
+          "test_type": "D",
+          "url": "https://www.shl.com/products/product-catalog/view/global-skills-development-report/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        },
+        {
+          "name": "OPQ MQ Sales Report",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/opq-mq-sales-report/"
+        },
+        {
+          "name": "Sales Transformation 2.0 - Individual Contributor",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/salestransformationreport2-0-individualcontributor/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "What’s the difference between OPQ and OPQ MQ Sales Report?",
+      "agent_reply": "**OPQ (OPQ32r)** is the underlying **personality questionnaire**: a broad, standard measure of workplace behavioural style used across roles and decisions (development, team fit, etc.).\n\n**OPQ MQ Sales Report** is a **reporting product**, not a different questionnaire. It summarizes OPQ results in a **sales-specific** way—graphical and narrative emphasis on behaviours tied to sales success. You can **optionally** add the **Motivation Questionnaire (MQ)** so the same report also reflects **sales motivators and drives**; without MQ, you still get the sales-framed OPQ story.\n\nSo: one assessment instrument (OPQ32r) for personality; the Sales Report is how you **read** those results for sellers (and optionally enrich with MQ).",
+      "recommendations": [
+        {
+          "name": "Global Skills Assessment",
+          "test_type": "C, K",
+          "url": "https://www.shl.com/products/product-catalog/view/global-skills-assessment/"
+        },
+        {
+          "name": "Global Skills Development Report",
+          "test_type": "D",
+          "url": "https://www.shl.com/products/product-catalog/view/global-skills-development-report/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        },
+        {
+          "name": "OPQ MQ Sales Report",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/opq-mq-sales-report/"
+        },
+        {
+          "name": "Sales Transformation 2.0 - Individual Contributor",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/salestransformationreport2-0-individualcontributor/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Clear. We’ll use OPQ for everyone and add MQ only where we want motivators in the Sales Report; keeping the five solutions as our audit stack.",
+      "agent_reply": "That matches how the catalog is built: OPQ32r once, OPQ MQ Sales Report for sales-language feedback and optional MQ, plus GSA and its development report for skills and associated re-skilling, and Sales Transformation 2.0 for rep-level digital selling behaviours.",
+      "recommendations": [
+        {
+          "name": "Global Skills Assessment",
+          "test_type": "C, K",
+          "url": "https://www.shl.com/products/product-catalog/view/global-skills-assessment/"
+        },
+        {
+          "name": "Global Skills Development Report",
+          "test_type": "D",
+          "url": "https://www.shl.com/products/product-catalog/view/global-skills-development-report/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        },
+        {
+          "name": "OPQ MQ Sales Report",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/opq-mq-sales-report/"
+        },
+        {
+          "name": "Sales Transformation 2.0 - Individual Contributor",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/salestransformationreport2-0-individualcontributor/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}

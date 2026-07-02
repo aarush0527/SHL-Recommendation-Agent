@@ -1,0 +1,108 @@
+{
+  "conversation_id": 2,
+  "persona_facts": [
+    "I'm hiring a senior Rust engineer for high-performance networking infrastructure. What assessments should I use?",
+    "Yes, go ahead. Should I also add a cognitive test for this level?",
+    "That works. Thanks."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "Smart Interview Live Coding",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/smart-interview-live-coding/"
+    },
+    {
+      "name": "Linux Programming (General)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/linux-programming-general/"
+    },
+    {
+      "name": "Networking and Implementation (New)",
+      "test_type": "K",
+      "url": "https://www.shl.com/products/product-catalog/view/networking-and-implementation-new/"
+    },
+    {
+      "name": "SHL Verify Interactive G+",
+      "test_type": "A",
+      "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-g/"
+    },
+    {
+      "name": "Occupational Personality Questionnaire OPQ32r",
+      "test_type": "P",
+      "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+    }
+  ],
+  "num_turns_in_reference": 3,
+  "full_transcript": [
+    {
+      "user": "I'm hiring a senior Rust engineer for high-performance networking infrastructure. What assessments should I use?",
+      "agent_reply": "SHL's catalog doesn't currently include a Rust-specific knowledge test. The closest fit for a senior IC is Smart Interview Live Coding — an adaptive live-coding interview where your panel can frame Rust-specific tasks directly. Linux Programming covers systems depth, and Networking and Implementation covers the infrastructure dimension. Want me to build a shortlist from these?",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Yes, go ahead. Should I also add a cognitive test for this level?",
+      "agent_reply": "Yes — Verify G+ is appropriate for senior technical candidates, covering inductive, numerical, and deductive reasoning in a single adaptive test. Full shortlist:\n\nI'm including OPQ32r by default as the personality component for a senior IC hire — say the word if you'd rather drop it.",
+      "recommendations": [
+        {
+          "name": "Smart Interview Live Coding",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/smart-interview-live-coding/"
+        },
+        {
+          "name": "Linux Programming (General)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/linux-programming-general/"
+        },
+        {
+          "name": "Networking and Implementation (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/networking-and-implementation-new/"
+        },
+        {
+          "name": "SHL Verify Interactive G+",
+          "test_type": "A",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-g/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "That works. Thanks.",
+      "agent_reply": "Note there's no Rust-specific test in the catalog — worth revisiting if that changes.",
+      "recommendations": [
+        {
+          "name": "Smart Interview Live Coding",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/smart-interview-live-coding/"
+        },
+        {
+          "name": "Linux Programming (General)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/linux-programming-general/"
+        },
+        {
+          "name": "Networking and Implementation (New)",
+          "test_type": "K",
+          "url": "https://www.shl.com/products/product-catalog/view/networking-and-implementation-new/"
+        },
+        {
+          "name": "SHL Verify Interactive G+",
+          "test_type": "A",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-g/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}

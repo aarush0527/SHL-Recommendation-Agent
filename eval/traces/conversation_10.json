@@ -1,0 +1,68 @@
+{
+  "conversation_id": 10,
+  "persona_facts": [
+    "We run a graduate management trainee scheme. We need a full battery — cognitive, personality, and situational judgement. All recent graduates.",
+    "But can you remove the OPQ32r and replace it with something shorter? Candidates complain it takes too long.",
+    "Drop the OPQ. Final list: Verify G+ and Graduate Scenarios."
+  ],
+  "expected_shortlist": [
+    {
+      "name": "SHL Verify Interactive G+",
+      "test_type": "A",
+      "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-g/"
+    },
+    {
+      "name": "Graduate Scenarios",
+      "test_type": "B",
+      "url": "https://www.shl.com/products/product-catalog/view/graduate-scenarios/"
+    }
+  ],
+  "num_turns_in_reference": 3,
+  "full_transcript": [
+    {
+      "user": "We run a graduate management trainee scheme. We need a full battery — cognitive, personality, and situational judgement. All recent graduates.",
+      "agent_reply": "For a graduate management trainee battery covering all three dimensions:",
+      "recommendations": [
+        {
+          "name": "SHL Verify Interactive G+",
+          "test_type": "A",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-g/"
+        },
+        {
+          "name": "Occupational Personality Questionnaire OPQ32r",
+          "test_type": "P",
+          "url": "https://www.shl.com/products/product-catalog/view/occupational-personality-questionnaire-opq32r/"
+        },
+        {
+          "name": "Graduate Scenarios",
+          "test_type": "B",
+          "url": "https://www.shl.com/products/product-catalog/view/graduate-scenarios/"
+        }
+      ],
+      "end_of_conversation": false
+    },
+    {
+      "user": "But can you remove the OPQ32r and replace it with something shorter? Candidates complain it takes too long.",
+      "agent_reply": "OPQ32r is the most relevant solution for your need. As such, there is no shorter alternative to be used as its replacement.",
+      "recommendations": [],
+      "end_of_conversation": false
+    },
+    {
+      "user": "Drop the OPQ. Final list: Verify G+ and Graduate Scenarios.",
+      "agent_reply": "Updated. OPQ32r removed. Final shortlist confirmed.",
+      "recommendations": [
+        {
+          "name": "SHL Verify Interactive G+",
+          "test_type": "A",
+          "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-g/"
+        },
+        {
+          "name": "Graduate Scenarios",
+          "test_type": "B",
+          "url": "https://www.shl.com/products/product-catalog/view/graduate-scenarios/"
+        }
+      ],
+      "end_of_conversation": true
+    }
+  ]
+}
