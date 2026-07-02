@@ -1,0 +1,1006 @@
+{
+  "generated_at": "2026-07-03 01:15:13",
+  "num_traces": 10,
+  "k_values": [
+    5,
+    10
+  ],
+  "retrieval_quality": {
+    "per_conversation": [
+      {
+        "mrr": 0.3333333333333333,
+        "num_predicted": 10,
+        "num_relevant": 3,
+        "precision@5": 0.2,
+        "recall@5": 0.3333333333333333,
+        "f1@5": 0.25,
+        "ap@5": 0.1111111111111111,
+        "ndcg@5": 0.23463936301137822,
+        "precision@10": 0.1,
+        "recall@10": 0.3333333333333333,
+        "f1@10": 0.15384615384615383,
+        "ap@10": 0.1111111111111111,
+        "ndcg@10": 0.23463936301137822,
+        "conversation_id": 1,
+        "query_preview": "We need a solution for senior leadership. The pool consists of CXOs, director-level postions; people with more than 15 years of experience. Selection — comparin...",
+        "top_predicted_names": [
+          "Enterprise Leadership Report 2.0",
+          "Enterprise Leadership Report 1.0",
+          "OPQ Leadership Report",
+          "OPQ Team Types and Leadership Styles Report",
+          "OPQ Team Types & Leadership Styles Profile",
+          "MFS 360 Enterprise Leadership Report",
+          "Verify - Following Instructions",
+          "Executive Scenarios",
+          "Executive Scenarios Profile Report",
+          "Executive Scenarios Narrative Report"
+        ],
+        "reference_names": [
+          "Occupational Personality Questionnaire OPQ32r",
+          "OPQ Universal Competency Report 2.0",
+          "OPQ Leadership Report"
+        ]
+      },
+      {
+        "mrr": 0.3333333333333333,
+        "num_predicted": 10,
+        "num_relevant": 5,
+        "precision@5": 0.2,
+        "recall@5": 0.2,
+        "f1@5": 0.20000000000000004,
+        "ap@5": 0.06666666666666667,
+        "ndcg@5": 0.16958010263680806,
+        "precision@10": 0.2,
+        "recall@10": 0.4,
+        "f1@10": 0.26666666666666666,
+        "ap@10": 0.12380952380952381,
+        "ndcg@10": 0.2826335043946801,
+        "conversation_id": 2,
+        "query_preview": "I'm hiring a senior Rust engineer for high-performance networking infrastructure. What assessments should I use? Yes, go ahead. Should I also add a cognitive te...",
+        "top_predicted_names": [
+          "HiPo Assessment Report 1.0",
+          "HiPo Assessment Report 2.0",
+          "Networking and Implementation (New)",
+          "ITIL (IT Infrastructure Library) (New)",
+          "Interviewing and Hiring Concepts (U.S.)",
+          "Verify - Technical Checking - Next Generation",
+          "SHL Verify Interactive G+",
+          "Desktop Support (New)",
+          "Sales & Service Phone Solution",
+          "Verify - Inductive Reasoning (2014)"
+        ],
+        "reference_names": [
+          "Smart Interview Live Coding",
+          "Linux Programming (General)",
+          "Networking and Implementation (New)",
+          "SHL Verify Interactive G+",
+          "Occupational Personality Questionnaire OPQ32r"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 4,
+        "precision@5": 0.4,
+        "recall@5": 0.5,
+        "f1@5": 0.4444444444444445,
+        "ap@5": 0.41666666666666663,
+        "ndcg@5": 0.5855700749881525,
+        "precision@10": 0.3,
+        "recall@10": 0.75,
+        "f1@10": 0.4285714285714285,
+        "ap@10": 0.5416666666666666,
+        "ndcg@10": 0.7246262544989281,
+        "conversation_id": 3,
+        "query_preview": "We're screening 500 entry-level contact centre agents. Inbound calls, customer service focus. What should we use? English. US. Is the Contact Center Call Simula...",
+        "top_predicted_names": [
+          "Customer Service Phone Simulation",
+          "Customer Service Phone Solution",
+          "Contact Center Call Simulation (New)",
+          "Sales & Service Phone Simulation",
+          "Sales & Service Phone Solution",
+          "Entry Level Customer Serv-Retail & Contact Center",
+          "Entry Level Customer Service (General) Solution",
+          "WriteX - Email Writing (Customer Service) (New)",
+          "Retail Sales and Service Simulation",
+          "Entry Level Cashier Solution"
+        ],
+        "reference_names": [
+          "SVAR Spoken English (US) (New)",
+          "Contact Center Call Simulation (New)",
+          "Entry Level Customer Serv - Retail & Contact Center",
+          "Customer Service Phone Simulation"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 5,
+        "precision@5": 0.4,
+        "recall@5": 0.4,
+        "f1@5": 0.4000000000000001,
+        "ap@5": 0.4,
+        "ndcg@5": 0.5531464700081437,
+        "precision@10": 0.2,
+        "recall@10": 0.4,
+        "f1@10": 0.26666666666666666,
+        "ap@10": 0.4,
+        "ndcg@10": 0.5531464700081437,
+        "conversation_id": 4,
+        "query_preview": "Hiring graduate financial analysts — final-year students, no work experience. We need numerical reasoning and a finance knowledge test. Good. Can you also add a...",
+        "top_predicted_names": [
+          "SHL Verify Interactive – Numerical Reasoning",
+          "Graduate Scenarios",
+          "Graduate Scenarios Profile Report",
+          "Graduate Scenarios Narrative Report",
+          "Verify - Numerical Ability",
+          "Verify - Deductive Reasoning",
+          "Executive Scenarios",
+          "Executive Scenarios Profile Report",
+          "Executive Scenarios Narrative Report",
+          "SHL Verify Interactive Numerical Calculation"
+        ],
+        "reference_names": [
+          "SHL Verify Interactive – Numerical Reasoning",
+          "Financial Accounting (New)",
+          "Basic Statistics (New)",
+          "Graduate Scenarios",
+          "Occupational Personality Questionnaire OPQ32r"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 5,
+        "precision@5": 0.2,
+        "recall@5": 0.2,
+        "f1@5": 0.20000000000000004,
+        "ap@5": 0.2,
+        "ndcg@5": 0.3391602052736161,
+        "precision@10": 0.2,
+        "recall@10": 0.4,
+        "f1@10": 0.26666666666666666,
+        "ap@10": 0.25,
+        "ndcg@10": 0.44615333764087994,
+        "conversation_id": 5,
+        "query_preview": "As part of our restructuring and annual talent audit, we need to re-skill our Sales organization. What solutions do you recommend? What’s the difference between...",
+        "top_predicted_names": [
+          "OPQ MQ Sales Report",
+          "Sales Profiler Cards",
+          "Sales Interview Guide",
+          "MQ Candidate Motivation Report",
+          "Sales Transformation Report 2.0 - Sales Manager",
+          "Sales Transformation Report 1.0 - Sales Manager",
+          "MQ Employee Motivation Report",
+          "Sales Transformation 2.0 - Individual Contributor",
+          "Sales Transformation 1.0 - Individual Contributor",
+          "OPQ Candidate Report 2.0"
+        ],
+        "reference_names": [
+          "Global Skills Assessment",
+          "Global Skills Development Report",
+          "Occupational Personality Questionnaire OPQ32r",
+          "OPQ MQ Sales Report",
+          "Sales Transformation 2.0 - Individual Contributor"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 2,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "f1@5": 0.5714285714285715,
+        "ap@5": 0.75,
+        "ndcg@5": 0.8772153153380493,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "f1@10": 0.33333333333333337,
+        "ap@10": 0.75,
+        "ndcg@10": 0.8772153153380493,
+        "conversation_id": 6,
+        "query_preview": "We're hiring plant operators for a chemical facility. Safety is absolute top priority — reliability, procedure compliance, never cutting corners. What do you re...",
+        "top_predicted_names": [
+          "Manufac. & Indust. - Safety & Dependability 8.0",
+          "Dependability and Safety Instrument (DSI)",
+          "Fire Engineering (New)",
+          "Workplace Health and Safety (New)",
+          "Interviewing and Hiring Concepts (U.S.)",
+          "Industrial Engineering (New)",
+          "Chemical Engineering (New)",
+          "DSI v1.1 Interpretation Report",
+          "Manufacturing & Industrial - Mechanical Focus 8.0",
+          "Culinary Skills (New)"
+        ],
+        "reference_names": [
+          "Manufac. & Indust. - Safety & Dependability 8.0",
+          "Workplace Health and Safety (New)"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 5,
+        "precision@5": 0.2,
+        "recall@5": 0.2,
+        "f1@5": 0.20000000000000004,
+        "ap@5": 0.2,
+        "ndcg@5": 0.3391602052736161,
+        "precision@10": 0.1,
+        "recall@10": 0.2,
+        "f1@10": 0.13333333333333333,
+        "ap@10": 0.2,
+        "ndcg@10": 0.3391602052736161,
+        "conversation_id": 7,
+        "query_preview": "We're hiring bilingual healthcare admin staff in South Texas — they handle patient records and need to be assessed in Spanish. HIPAA compliance is critical. Wha...",
+        "top_predicted_names": [
+          "HIPAA (Security)",
+          "Written Spanish",
+          "Interviewing and Hiring Concepts (U.S.)",
+          "Written English v1",
+          "Smart Interview Live",
+          "SVAR - Spoken English (U.K.)",
+          "SVAR - Spoken English (US) (New)",
+          "SVAR - Spoken English (AUS)",
+          "Smart Interview On Demand",
+          "SVAR - Spoken English (Indian Accent) (New)"
+        ],
+        "reference_names": [
+          "HIPAA (Security)",
+          "Medical Terminology (New)",
+          "Microsoft Word 365 - Essentials (New)",
+          "Dependability and Safety Instrument (DSI)",
+          "Occupational Personality Questionnaire OPQ32r"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 5,
+        "precision@5": 0.6,
+        "recall@5": 0.6,
+        "f1@5": 0.6,
+        "ap@5": 0.52,
+        "ndcg@5": 0.6843515475204855,
+        "precision@10": 0.4,
+        "recall@10": 0.8,
+        "f1@10": 0.5333333333333333,
+        "ap@10": 0.6533333333333333,
+        "ndcg@10": 0.8051628502199797,
+        "conversation_id": 8,
+        "query_preview": "I need to quickly screen admin assistants for Excel and Word daily. In that case, I am OK with adding a simulation - we want to capture the capabilties. That's ...",
+        "top_predicted_names": [
+          "MS Excel (New)",
+          "Microsoft Excel 365 (New)",
+          "Microsoft Excel 365 - Essentials (New)",
+          "Sales & Service Phone Simulation",
+          "MS Word (New)",
+          "Microsoft Word 365 (New)",
+          "Data Entry Ten Key Split Screen",
+          "MS Office Basic Computer Literacy (New)",
+          "Polymer Engineering (New)",
+          "Microsoft Word 365 - Essentials (New)"
+        ],
+        "reference_names": [
+          "Microsoft Excel 365 (New)",
+          "Microsoft Word 365 (New)",
+          "MS Excel (New)",
+          "MS Word (New)",
+          "Occupational Personality Questionnaire OPQ32r"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 7,
+        "precision@5": 0.8,
+        "recall@5": 0.5714285714285714,
+        "f1@5": 0.6666666666666666,
+        "ap@5": 0.6433333333333333,
+        "ndcg@5": 0.7860137352654724,
+        "precision@10": 0.4,
+        "recall@10": 0.5714285714285714,
+        "f1@10": 0.47058823529411764,
+        "ap@10": 0.45952380952380956,
+        "ndcg@10": 0.637033973357029,
+        "conversation_id": 9,
+        "query_preview": "Here's the JD for an engineer we need to fill. Can you recommend an assessment battery?\n\n\"Senior Full-Stack Engineer — 5+ years across Core Java, Spring, REST A...",
+        "top_predicted_names": [
+          "Core Java (Advanced Level) (New)",
+          "Core Java (Entry Level) (New)",
+          "Spring (New)",
+          "Docker (New)",
+          "Amazon Web Services (AWS) Development (New)",
+          "Java Frameworks (New)",
+          "Java Design Patterns (New)",
+          "Java 8 (New)",
+          "Oracle PL/SQL (New)",
+          "Smart Interview Live"
+        ],
+        "reference_names": [
+          "Core Java (Advanced Level) (New)",
+          "Spring (New)",
+          "SQL (New)",
+          "Amazon Web Services (AWS) Development (New)",
+          "Docker (New)",
+          "SHL Verify Interactive G+",
+          "Occupational Personality Questionnaire OPQ32r"
+        ]
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 10,
+        "num_relevant": 2,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "f1@5": 0.28571428571428575,
+        "ap@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "f1@10": 0.16666666666666669,
+        "ap@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "conversation_id": 10,
+        "query_preview": "We run a graduate management trainee scheme. We need a full battery — cognitive, personality, and situational judgement. All recent graduates. But can you remov...",
+        "top_predicted_names": [
+          "Graduate Scenarios",
+          "Graduate Scenarios Profile Report",
+          "Graduate Scenarios Narrative Report",
+          "Executive Scenarios",
+          "Executive Scenarios Profile Report",
+          "Executive Scenarios Narrative Report",
+          "Management Scenarios",
+          "Managerial Scenarios Narrative Report",
+          "Managerial Scenarios Profile Report",
+          "Managerial Scenarios Candidate Report"
+        ],
+        "reference_names": [
+          "SHL Verify Interactive G+",
+          "Graduate Scenarios"
+        ]
+      }
+    ],
+    "aggregated": {
+      "mrr": 0.8666666666666666,
+      "num_predicted": 10.0,
+      "num_relevant": 4.3,
+      "precision@5": 0.36,
+      "recall@5": 0.4504761904761905,
+      "f1@5": 0.38182539682539685,
+      "ap@5": 0.38077777777777777,
+      "ndcg@5": 0.518198421208118,
+      "precision@10": 0.22000000000000003,
+      "recall@10": 0.5354761904761904,
+      "f1@10": 0.3019672484378367,
+      "ap@10": 0.39894444444444443,
+      "ndcg@10": 0.5512918466508142,
+      "num_queries": 10
+    }
+  },
+  "end_to_end": {
+    "status": "ok",
+    "per_conversation": [
+      {
+        "mrr": 0.3333333333333333,
+        "num_predicted": 5,
+        "num_relevant": 3,
+        "precision@5": 0.2,
+        "recall@5": 0.3333333333333333,
+        "f1@5": 0.25,
+        "ap@5": 0.1111111111111111,
+        "ndcg@5": 0.23463936301137822,
+        "precision@10": 0.2,
+        "recall@10": 0.3333333333333333,
+        "f1@10": 0.25,
+        "ap@10": 0.1111111111111111,
+        "ndcg@10": 0.23463936301137822,
+        "conversation_id": 1,
+        "turns_used": 4,
+        "turns_in_reference": 4,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 3,
+        "num_relevant": 5,
+        "precision@5": 0.6666666666666666,
+        "recall@5": 0.4,
+        "f1@5": 0.5,
+        "ap@5": 0.3333333333333333,
+        "ndcg@5": 0.5087403079104241,
+        "precision@10": 0.6666666666666666,
+        "recall@10": 0.4,
+        "f1@10": 0.5,
+        "ap@10": 0.3333333333333333,
+        "ndcg@10": 0.5087403079104241,
+        "conversation_id": 2,
+        "turns_used": 3,
+        "turns_in_reference": 3,
+        "final_eoc": true,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 0.0,
+        "num_predicted": 0,
+        "num_relevant": 4,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "f1@5": 0.0,
+        "ap@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "f1@10": 0.0,
+        "ap@10": 0.0,
+        "ndcg@10": 0.0,
+        "conversation_id": 3,
+        "turns_used": 5,
+        "turns_in_reference": 5,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 5,
+        "num_relevant": 5,
+        "precision@5": 0.4,
+        "recall@5": 0.4,
+        "f1@5": 0.4000000000000001,
+        "ap@5": 0.3333333333333333,
+        "ndcg@5": 0.5087403079104241,
+        "precision@10": 0.4,
+        "recall@10": 0.4,
+        "f1@10": 0.4000000000000001,
+        "ap@10": 0.3333333333333333,
+        "ndcg@10": 0.5087403079104241,
+        "conversation_id": 4,
+        "turns_used": 3,
+        "turns_in_reference": 3,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 3,
+        "num_relevant": 5,
+        "precision@5": 0.6666666666666666,
+        "recall@5": 0.4,
+        "f1@5": 0.5,
+        "ap@5": 0.3333333333333333,
+        "ndcg@5": 0.5087403079104241,
+        "precision@10": 0.6666666666666666,
+        "recall@10": 0.4,
+        "f1@10": 0.5,
+        "ap@10": 0.3333333333333333,
+        "ndcg@10": 0.5087403079104241,
+        "conversation_id": 5,
+        "turns_used": 3,
+        "turns_in_reference": 3,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 0.0,
+        "num_predicted": 0,
+        "num_relevant": 2,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "f1@5": 0.0,
+        "ap@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "f1@10": 0.0,
+        "ap@10": 0.0,
+        "ndcg@10": 0.0,
+        "conversation_id": 6,
+        "turns_used": 3,
+        "turns_in_reference": 3,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 5,
+        "num_relevant": 5,
+        "precision@5": 0.2,
+        "recall@5": 0.2,
+        "f1@5": 0.20000000000000004,
+        "ap@5": 0.2,
+        "ndcg@5": 0.3391602052736161,
+        "precision@10": 0.2,
+        "recall@10": 0.2,
+        "f1@10": 0.20000000000000004,
+        "ap@10": 0.2,
+        "ndcg@10": 0.3391602052736161,
+        "conversation_id": 7,
+        "turns_used": 4,
+        "turns_in_reference": 4,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 5,
+        "num_relevant": 5,
+        "precision@5": 0.4,
+        "recall@5": 0.4,
+        "f1@5": 0.4000000000000001,
+        "ap@5": 0.27999999999999997,
+        "ndcg@5": 0.4703652827859579,
+        "precision@10": 0.4,
+        "recall@10": 0.4,
+        "f1@10": 0.4000000000000001,
+        "ap@10": 0.27999999999999997,
+        "ndcg@10": 0.4703652827859579,
+        "conversation_id": 8,
+        "turns_used": 3,
+        "turns_in_reference": 3,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 5,
+        "num_relevant": 7,
+        "precision@5": 0.8,
+        "recall@5": 0.5714285714285714,
+        "f1@5": 0.6666666666666666,
+        "ap@5": 0.6433333333333333,
+        "ndcg@5": 0.7860137352654724,
+        "precision@10": 0.8,
+        "recall@10": 0.5714285714285714,
+        "f1@10": 0.6666666666666666,
+        "ap@10": 0.45952380952380956,
+        "ndcg@10": 0.637033973357029,
+        "conversation_id": 9,
+        "turns_used": 7,
+        "turns_in_reference": 7,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      },
+      {
+        "mrr": 1.0,
+        "num_predicted": 5,
+        "num_relevant": 2,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "f1@5": 0.28571428571428575,
+        "ap@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.2,
+        "recall@10": 0.5,
+        "f1@10": 0.28571428571428575,
+        "ap@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "conversation_id": 10,
+        "turns_used": 3,
+        "turns_in_reference": 3,
+        "final_eoc": false,
+        "error": null,
+        "turn_efficiency": 1.0
+      }
+    ],
+    "aggregated": {
+      "mrr": 0.7333333333333333,
+      "num_predicted": 3.6,
+      "num_relevant": 4.3,
+      "precision@5": 0.35333333333333333,
+      "recall@5": 0.32047619047619047,
+      "f1@5": 0.32023809523809527,
+      "ap@5": 0.27344444444444443,
+      "ndcg@5": 0.39695467028331555,
+      "precision@10": 0.35333333333333333,
+      "recall@10": 0.32047619047619047,
+      "f1@10": 0.32023809523809527,
+      "ap@10": 0.2550634920634921,
+      "ndcg@10": 0.38205669409247117,
+      "turn_efficiency": 1.0,
+      "num_queries": 10
+    }
+  },
+  "latency": {
+    "mean": 18.811709133678384,
+    "median": 20.511788478994276,
+    "max": 23.795091000036336,
+    "n": 38
+  },
+  "groundedness_deterministic": {
+    "status": "ok",
+    "data": {
+      "total_recommendations_checked": 137,
+      "num_violations": 0,
+      "hallucination_rate": 0.0,
+      "violations": []
+    }
+  },
+  "groundedness_llm": {
+    "status": "ok",
+    "per_conversation": [
+      {
+        "conversation_id": 1,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "The assistant's reply contains no specific, checkable factual claims about the assessments' properties.",
+            "reason": "The reply does not provide any specific information about the assessments that can be verified against the catalog facts."
+          }
+        ]
+      },
+      {
+        "conversation_id": 2,
+        "fully_grounded": true,
+        "groundedness_score": 1.0,
+        "unsupported_claims": []
+      },
+      {
+        "conversation_id": 3,
+        "skipped": "no final recommendations"
+      },
+      {
+        "conversation_id": 4,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "The assistant's reply does not provide any specific, checkable factual claims about the assessments.",
+            "reason": "The reply does not contain any specific information about the assessments that can be verified against the catalog facts."
+          }
+        ]
+      },
+      {
+        "conversation_id": 5,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "The OPQ32r takes about 25 minutes to complete",
+            "reason": "The catalog facts support this claim, but the assistant's reply does not make this claim. However, the claim about the duration of OPQ Team Types & Leadership Styles Profile and OPQ MQ Sales Report is not mentioned in the reply, but the catalog facts do not specify the duration for these assessments."
+          }
+        ]
+      },
+      {
+        "conversation_id": 6,
+        "skipped": "no final recommendations"
+      },
+      {
+        "conversation_id": 7,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "The assistant's reply contains no specific, checkable factual claims about the assessments.",
+            "reason": "The reply does not provide any specific information about the assessments that can be verified against the catalog facts."
+          }
+        ]
+      },
+      {
+        "conversation_id": 8,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "The assistant's reply contains no specific, checkable factual claims about the assessments' properties.",
+            "reason": "The reply does not provide any specific information about the assessments that can be verified against the catalog facts."
+          }
+        ]
+      },
+      {
+        "conversation_id": 9,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "Here's what I found based on what you've told me so far.",
+            "reason": "This claim is not checkable as it does not provide any specific information about the assessments."
+          }
+        ]
+      },
+      {
+        "conversation_id": 10,
+        "fully_grounded": false,
+        "groundedness_score": 0.0,
+        "unsupported_claims": [
+          {
+            "claim": "Here's what I found based on what you've told me so far.",
+            "reason": "This claim is not specific or checkable against the provided catalog facts."
+          }
+        ]
+      }
+    ],
+    "aggregated": {
+      "num_judged": 8,
+      "num_skipped": 2,
+      "mean_groundedness_score": 0.125,
+      "fraction_fully_grounded": 0.125,
+      "total_unsupported_claims": 7
+    }
+  },
+  "relevance_llm": {
+    "status": "ok",
+    "per_conversation": [
+      {
+        "conversation_id": 1,
+        "items": [
+          {
+            "name": "Enterprise Leadership Report 1.0",
+            "verdict": "partially_relevant",
+            "reason": "It is similar to the requested Enterprise Leadership Report 2.0 but not exactly what was asked for."
+          },
+          {
+            "name": "Enterprise Leadership Report 2.0",
+            "verdict": "relevant",
+            "reason": "It matches the requested assessment for comparing candidates against a leadership benchmark."
+          },
+          {
+            "name": "OPQ Leadership Report",
+            "verdict": "relevant",
+            "reason": "It provides a detailed analysis of an individual's leadership potential, fitting the need for senior leadership positions."
+          },
+          {
+            "name": "MFS 360 Enterprise Leadership Report",
+            "verdict": "partially_relevant",
+            "reason": "Although it is based on the Enterprise Leadership competency model, its inclusion was not explicitly requested and its details do not perfectly match the initial query."
+          },
+          {
+            "name": "OPQ Team Types and Leadership Styles Report",
+            "verdict": "not_relevant",
+            "reason": "It focuses on team types and leadership styles rather than providing a direct analysis of leadership potential or benchmarking against enterprise leadership models."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The list includes highly relevant assessments like the Enterprise Leadership Report 2.0 and the OPQ Leadership Report, but also includes some partially relevant or not relevant assessments that do not perfectly fit the stated need.",
+        "relevance_precision": 0.6
+      },
+      {
+        "conversation_id": 2,
+        "items": [
+          {
+            "name": "SHL Verify Interactive G+",
+            "verdict": "partially_relevant",
+            "reason": "While cognitive ability is relevant for a senior role, it doesn't directly assess Rust or high-performance networking skills."
+          },
+          {
+            "name": "Verify - Numerical Ability",
+            "verdict": "partially_relevant",
+            "reason": "Numerical reasoning is useful, but not directly related to Rust programming or high-performance networking infrastructure."
+          },
+          {
+            "name": "Networking and Implementation (New)",
+            "verdict": "relevant",
+            "reason": "This assessment directly measures knowledge of networking devices, protocols, and implementation, which is a key requirement for the role."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The list includes a relevant assessment for networking knowledge, but the cognitive and numerical ability tests, while partially relevant, do not directly assess the specific technical skills required for the role.",
+        "relevance_precision": 0.6666666666666666
+      },
+      {
+        "conversation_id": 3,
+        "skipped": "no final recommendations"
+      },
+      {
+        "conversation_id": 4,
+        "items": [
+          {
+            "name": "SHL Verify Interactive – Numerical Reasoning",
+            "verdict": "relevant",
+            "reason": "It assesses numerical reasoning, which is a key requirement for the graduate financial analyst role."
+          },
+          {
+            "name": "Verify - Numerical Ability",
+            "verdict": "relevant",
+            "reason": "It measures numerical ability, which aligns with the numerical reasoning requirement for the role."
+          },
+          {
+            "name": "Graduate Scenarios",
+            "verdict": "relevant",
+            "reason": "It is specifically designed to assess managerial judgement in graduates, which fits the situational judgement element required for the role."
+          },
+          {
+            "name": "Graduate Scenarios Profile Report",
+            "verdict": "partially_relevant",
+            "reason": "While it is related to the Graduate Scenarios test, its purpose is to provide a report rather than being a distinct assessment of the candidate's abilities."
+          },
+          {
+            "name": "Graduate Scenarios Narrative Report",
+            "verdict": "partially_relevant",
+            "reason": "Similar to the Profile Report, it is more about providing a narrative report of the candidate's performance in the Graduate Scenarios test rather than a separate assessment."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The list includes highly relevant assessments for numerical reasoning and situational judgement, but also includes reports that, while related, do not directly assess candidate abilities.",
+        "relevance_precision": 0.8
+      },
+      {
+        "conversation_id": 5,
+        "items": [
+          {
+            "name": "Occupational Personality Questionnaire OPQ32r",
+            "verdict": "relevant",
+            "reason": "It provides a general framework for understanding workplace behavioral style, which is useful for re-skilling the Sales organization."
+          },
+          {
+            "name": "OPQ Team Types & Leadership Styles Profile",
+            "verdict": "partially_relevant",
+            "reason": "While it provides insights into team types and leadership styles, its direct relevance to sales re-skilling is not as clear as other assessments."
+          },
+          {
+            "name": "OPQ MQ Sales Report",
+            "verdict": "relevant",
+            "reason": "It is specifically designed to provide insights into an individual's natural style that is critical to sales success, aligning with the sales re-skilling goal."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The recommended assessments are largely relevant to the stated need of re-skilling the Sales organization, with a good balance of general and sales-specific evaluations.",
+        "relevance_precision": 0.8333333333333334
+      },
+      {
+        "conversation_id": 6,
+        "skipped": "no final recommendations"
+      },
+      {
+        "conversation_id": 7,
+        "items": [
+          {
+            "name": "HIPAA (Security)",
+            "verdict": "partially_relevant",
+            "reason": "It assesses HIPAA compliance knowledge but is only available in English, not Spanish, which is also required for the role."
+          },
+          {
+            "name": "Written Spanish",
+            "verdict": "relevant",
+            "reason": "It measures Spanish grammar and reading comprehension skills, which is directly relevant to the bilingual requirement of the role."
+          },
+          {
+            "name": "Interviewing and Hiring Concepts (U.S.)",
+            "verdict": "not_relevant",
+            "reason": "It is focused on the hiring process and does not assess the skills or knowledge required for the healthcare admin staff role itself."
+          },
+          {
+            "name": "Written English v1",
+            "verdict": "partially_relevant",
+            "reason": "While it assesses English grammar and reading comprehension, the role specifies that written work will be in English, but the primary concern is bilingual staff, making this assessment less critical."
+          },
+          {
+            "name": "Smart Interview Live",
+            "verdict": "not_relevant",
+            "reason": "It is a video interview tool and does not assess specific skills or knowledge required for the healthcare admin staff role."
+          }
+        ],
+        "overall_relevance_score": 2,
+        "overall_reason": "The list includes some assessments that are not directly relevant to the stated needs of bilingual healthcare admin staff, particularly the lack of a Spanish-language HIPAA compliance assessment.",
+        "relevance_precision": 0.4
+      },
+      {
+        "conversation_id": 8,
+        "items": [
+          {
+            "name": "Microsoft Excel 365 (New)",
+            "verdict": "relevant",
+            "reason": "It is a simulation that evaluates the ability to perform operations in a simulated environment of MS Excel, which fits the stated need for screening admin assistants for Excel capabilities."
+          },
+          {
+            "name": "Microsoft Excel 365 - Essentials (New)",
+            "verdict": "partially_relevant",
+            "reason": "Although it is similar to Microsoft Excel 365, the 'Essentials' version may not capture the full range of capabilities required for the role, but it still evaluates ability to perform operations in a simulated environment of MS Excel."
+          },
+          {
+            "name": "Data Entry (New)",
+            "verdict": "partially_relevant",
+            "reason": "While data entry is a relevant skill for admin assistants, this assessment only measures the ability to accurately transcribe data and does not directly assess Excel or Word capabilities."
+          },
+          {
+            "name": "Accounts Receivable Simulation (New)",
+            "verdict": "not_relevant",
+            "reason": "This assessment is focused on processing receivables and invoices, which is not directly related to the stated need for screening admin assistants for Excel and Word capabilities."
+          },
+          {
+            "name": "Microsoft Word 365 (New)",
+            "verdict": "relevant",
+            "reason": "It is a simulation that evaluates the ability to perform operations in a simulated environment of Microsoft Word, which fits the stated need for screening admin assistants for Word capabilities."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The list includes relevant simulations for both Excel and Word, but also includes some assessments that are only partially relevant or not relevant to the stated need.",
+        "relevance_precision": 0.6
+      },
+      {
+        "conversation_id": 9,
+        "items": [
+          {
+            "name": "Core Java (Advanced Level) (New)",
+            "verdict": "relevant",
+            "reason": "The job description requires Core Java expertise, and the advanced level test is suitable for a senior engineer."
+          },
+          {
+            "name": "Core Java (Entry Level) (New)",
+            "verdict": "not_relevant",
+            "reason": "The job description requires a senior engineer with 5+ years of experience, making the entry-level test unsuitable."
+          },
+          {
+            "name": "Spring (New)",
+            "verdict": "relevant",
+            "reason": "The job description mentions Spring as a required skill, and the test measures knowledge of Spring core concepts."
+          },
+          {
+            "name": "Amazon Web Services (AWS) Development (New)",
+            "verdict": "relevant",
+            "reason": "The job description requires AWS deployment experience, and the test measures knowledge of AWS development concepts."
+          },
+          {
+            "name": "Docker (New)",
+            "verdict": "relevant",
+            "reason": "The job description mentions Docker as a required skill, and the test measures knowledge of Docker concepts."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The recommended assessments cover most of the required technical skills, but the inclusion of the Core Java entry-level test is unnecessary and redundant.",
+        "relevance_precision": 0.8
+      },
+      {
+        "conversation_id": 10,
+        "items": [
+          {
+            "name": "Graduate Scenarios",
+            "verdict": "relevant",
+            "reason": "It is a situational judgement test specifically designed for graduates, which aligns with the user's requirement for a situational judgement assessment for recent graduates."
+          },
+          {
+            "name": "Graduate Scenarios Profile Report",
+            "verdict": "not_relevant",
+            "reason": "It appears to be a report related to the Graduate Scenarios test, rather than a separate assessment, and its inclusion is redundant."
+          },
+          {
+            "name": "Graduate Scenarios Narrative Report",
+            "verdict": "not_relevant",
+            "reason": "Similar to the Profile Report, it seems to be another report related to the Graduate Scenarios test, making it redundant in the list of assessments."
+          },
+          {
+            "name": "Global Skills Development Report",
+            "verdict": "partially_relevant",
+            "reason": "While it provides insights into skills development, which could be useful, it does not directly address the cognitive or situational judgement aspects of the initial request, and its focus is broader than just graduates."
+          },
+          {
+            "name": "Verify - Numerical Ability",
+            "verdict": "relevant",
+            "reason": "It is a cognitive ability test that measures numerical ability, which is part of the cognitive assessments the user requested for recent graduates."
+          }
+        ],
+        "overall_relevance_score": 4,
+        "overall_reason": "The list includes relevant cognitive and situational judgement assessments for recent graduates, but includes redundant reports and lacks a personality assessment, which was part of the initial request.",
+        "relevance_precision": 0.5
+      }
+    ],
+    "aggregated": {
+      "num_judged": 8,
+      "num_skipped": 2,
+      "mean_relevance_precision": 0.65,
+      "mean_overall_relevance_score": 3.75
+    }
+  },
+  "overall": {
+    "components_used": {
+      "end_to_end_f1": 0.32023809523809527,
+      "llm_relevance_precision": 0.65,
+      "llm_groundedness_score": 0.125,
+      "turn_efficiency": 1.0
+    },
+    "components_skipped": [],
+    "composite_score": 0.4218452380952381,
+    "hallucination_penalty_applied": false,
+    "deterministic_hallucination_rate": 0.0
+  }
+}
